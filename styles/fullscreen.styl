@@ -1,0 +1,20 @@
+.bdsft-webrtc
+  .enableFullscreen:not(.fullscreen-shown) .fullscreenExpand,
+  .enableFullscreen.fullscreen-shown .fullscreenContract
+    {fadeIn}
+
+  .enableFullscreen.fullscreen-shown .fullscreenExpand,
+  .enableFullscreen:not(.fullscreen-shown) .fullscreenContract
+    {fadeOut}  
+
+  :not(.enableFullscreen).cell-fullScreen
+    display none !important
+    
+  .conference .fullscreenExpand, 
+  .conference .fullscreenContract
+    text-align left !important
+
+  .audioOnly .fullscreenExpand, 
+  .audioOnly .fullscreenContract,
+  .audioOnly .cell-fullScreen
+    display none !important
