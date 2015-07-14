@@ -1,18 +1,12 @@
-var jsdom = require('mocha-jsdom');
-expect = require('expect');
-jsdom({});
-
+test = require('../node_modules/webrtc-core/test/includes/common');
 describe('fullscreen', function() {
 
   beforeEach(function() {
-    core = require('webrtc-core');
-    testUA = core.testUA;
-    testUA.createModelAndView('fullscreen', {
+    test.createModelAndView('fullscreen', {
         fullscreen: require('../'),
         sound: require('webrtc-sound')
     });
     urlconfig = bdsft_client_instances.test.urlconfig;
-    testUA.mockWebRTC();
   });
 
   it('start', function() {
@@ -29,18 +23,18 @@ describe('fullscreen', function() {
     fullscreen.enableFullscreen = true;
     fullscreen.visible = false;
     expect(fullscreen.classes).toEqual(['fullscreen-hidden', 'enableFullscreen']);
-    testUA.isVisible(fullscreenview.fullscreenExpand, true);
-    testUA.isVisible(fullscreenview.fullscreenContract, false);
+    test.isVisible(fullscreenview.fullscreenExpand, true);
+    test.isVisible(fullscreenview.fullscreenContract, false);
 
     fullscreenview.fullscreenExpand.trigger('click');
     expect(fullscreen.classes).toEqual(["fullscreen-shown","enableFullscreen"]);
-    testUA.isVisible(fullscreenview.fullscreenExpand, false);
-    testUA.isVisible(fullscreenview.fullscreenContract, true);
+    test.isVisible(fullscreenview.fullscreenExpand, false);
+    test.isVisible(fullscreenview.fullscreenContract, true);
 
     fullscreenview.fullscreenContract.trigger('click');
     expect(fullscreen.classes).toEqual(['fullscreen-hidden', 'enableFullscreen']);
-    testUA.isVisible(fullscreenview.fullscreenExpand, true);
-    testUA.isVisible(fullscreenview.fullscreenContract, false);
+    test.isVisible(fullscreenview.fullscreenExpand, true);
+    test.isVisible(fullscreenview.fullscreenContract, false);
   });
 
   it('view for audioOnly', function() {
