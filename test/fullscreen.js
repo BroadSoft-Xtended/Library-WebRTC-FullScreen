@@ -22,17 +22,17 @@ describe('fullscreen', function() {
   it('view', function() {
     fullscreen.enableFullscreen = true;
     fullscreen.visible = false;
-    expect(fullscreen.classes).toEqual(['fullscreen-hidden', 'enableFullscreen']);
+    expect(fullscreen.classes).toEqual(['fullscreen-hidden', 'enableFullscreen', 'audioVideo']);
     test.isVisible(fullscreenview.fullscreenExpand, true);
     test.isVisible(fullscreenview.fullscreenContract, false);
 
     fullscreenview.fullscreenExpand.trigger('click');
-    expect(fullscreen.classes).toEqual(["fullscreen-shown","enableFullscreen"]);
+    expect(fullscreen.classes).toEqual(["fullscreen-shown","enableFullscreen", 'audioVideo']);
     test.isVisible(fullscreenview.fullscreenExpand, false);
     test.isVisible(fullscreenview.fullscreenContract, true);
 
     fullscreenview.fullscreenContract.trigger('click');
-    expect(fullscreen.classes).toEqual(['fullscreen-hidden', 'enableFullscreen']);
+    expect(fullscreen.classes).toEqual(['fullscreen-hidden', 'enableFullscreen', 'audioVideo']);
     test.isVisible(fullscreenview.fullscreenExpand, true);
     test.isVisible(fullscreenview.fullscreenContract, false);
   });
