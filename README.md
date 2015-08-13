@@ -2,9 +2,7 @@
 
 Handles fullscreen mode.
 
-Model : bdsft_webrtc.default.fullscreen
-
-View : bdsft_webrtc.default.fullscreenview
+Namespace : bdsft_webrtc.default.fullscreen
 
 Dependencies : [Sound](https://github.com/BroadSoft-Xtended/Library-WebRTC-Sound) 
 

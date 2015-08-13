@@ -6,7 +6,7 @@ describe('fullscreen', function() {
         fullscreen: require('../'),
         sound: require('webrtc-sound')
     });
-    urlconfig = bdsft_client_instances.test.urlconfig;
+    urlconfig = bdsft_client_instances.test.core.urlconfig;
   });
 
   it('start', function() {
