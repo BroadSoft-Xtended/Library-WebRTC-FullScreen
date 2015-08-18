@@ -4,7 +4,7 @@ Handles fullscreen mode.
 
 Namespace : bdsft_webrtc.default.fullscreen
 
-Dependencies : [Sound](https://github.com/BroadSoft-Xtended/Library-WebRTC-Sound) 
+Dependencies : [Sound](https://github.com/BroadSoft-Xtended/Library-WebRTC-Sound), [SIPStack](https://github.com/BroadSoft-Xtended/Library-WebRTC-SIPStack)  
 
 ## Elements
 <a name="elements"></a>

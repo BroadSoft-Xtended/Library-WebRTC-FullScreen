@@ -10,6 +10,7 @@
   },
   "devDependencies": {
     "webrtc-core": "BroadSoft-Xtended/Library-WebRTC-Core.git",
+    "webrtc-sipstack": "BroadSoft-Xtended/Library-WebRTC-SIPStack.git",
     "webrtc-sound": "BroadSoft-Xtended/Library-WebRTC-Sound.git",
     "templatizer": "1.2.1",
     "mocha": "2.1.0",
