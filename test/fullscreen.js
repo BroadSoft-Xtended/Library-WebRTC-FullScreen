@@ -1,11 +1,14 @@
-test = require('../node_modules/webrtc-sipstack/test/includes/common')(require('../node_modules/webrtc-core/test/includes/common'));
+test = require('../node_modules/webrtc-sipstack/test/includes/common')(require('../node_modules/bdsft-sdk-test/lib/common'));
 describe('fullscreen', function() {
 
   beforeEach(function() {
     test.createModelAndView('fullscreen', {
         fullscreen: require('../'),
         sound: require('webrtc-sound'),
-        sipstack: require('webrtc-sipstack')
+        sipstack: require('webrtc-sipstack'),
+        eventbus: require('bdsft-sdk-eventbus'),
+        debug: require('bdsft-sdk-debug'),
+        core: require('webrtc-core')
     });
     urlconfig = bdsft_client_instances.test.core.urlconfig;
   });
